@@ -1,10 +1,10 @@
 import { client } from "./index.js";
 
  async function getAllProduct(req) {
-  return await client.db("Products").collection("products").find(req.query).toArray();
+  return await client.db("Products").collection("products").find(req.query).toArray().pretty();
 }
  async function getProduct(id) {
-  return await client.db("Products").collection("products").findOne({ id: id });
+  return await client.db("Products").collection("products").findOne({ id: id }).pretty();
 }
  async function deleteProduct(id) {
   return await client.db("Products").collection("products").deleteOne({ id: id });
