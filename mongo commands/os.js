@@ -1,0 +1,12 @@
+const os=require('os');
+console.log("Free Memory", os.freemem()/2024/1024/1024);
+console.log("Total Memory",os.totalmem());
+console.log("version",os.version());
+console.log("platform",os.platform());
+console.log("Arch:",os.arch());
+console.log("Cpus:",os.cpus());
+console.log("Types",os.type());
+console.log("release",os.release());
+console.log("cores",os.cpus().length);
+console.log(`cores,${os.cpus().length} cores`);
+console.log("cpu speed",os.cpus()[0].speed);
